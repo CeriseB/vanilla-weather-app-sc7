@@ -64,8 +64,10 @@ function showWeather(response) {
     let humidityElement = document.querySelector("#humidity");
     let windElement = document.querySelector("#wind");
 
+    fahrenheitTemperature = response.data.main.temp;
+
     cityElement.innerHTML = response.data.name;
-    temperatureElement.innerHTML = Math.round(response.data.main.temp);
+    temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
     weatherElement.innerHTML = `${response.data.weather[0].description}`;
     humidityElement.innerHTML = `${response.data.main.humidity} %`;
     windElement.innerHTML = `${Math.round(response.data.wind.speed)} mph`;
@@ -147,19 +149,21 @@ function getCurrentLocation(event) {
 //   temperatureElement.innerHTML = 66;
 // }
 
-function displayCelciusTemperature(event) {
+function displayCelsiusTemperature(event) {
   event.preventDefault();
-  let celciusTemperature = ((72 - 32) * 5) / 9;
+  let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
   // alert("Link clicked");
   let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celciusTemperature);
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 searchCity("San Francisco");
 
-//------------  --------------
-let celciusConversionLink = document.querySelector("#celcius-conversion-link");
-celciusConversionLink.addEventListener("click", displayCelciusTemperature);
+//------------variables--------------
+let fahrenheitTemperature = null;
+
+let celsiusConversionLink = document.querySelector("#celsius-conversion-link");
+celsiusConversionLink.addEventListener("click", displayCelsiusTemperature);
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
