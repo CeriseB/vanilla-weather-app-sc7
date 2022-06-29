@@ -149,11 +149,13 @@ function getCurrentLocation(event) {
 
 function displayCelciusTemperature(event) {
   event.preventDefault();
-  let celciusTemperature = (72 - 32) * 5 / 9;
+  let celciusTemperature = ((72 - 32) * 5) / 9;
   // alert("Link clicked");
-  let temperatureElement.querySelector("#temperature");
+  let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celciusTemperature);
 }
+
+searchCity("San Francisco");
 
 //------------  --------------
 let celciusConversionLink = document.querySelector("#celcius-conversion-link");
@@ -164,5 +166,3 @@ searchForm.addEventListener("submit", handleSubmit);
 
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
-
-searchCity("San Francisco");
