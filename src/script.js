@@ -59,7 +59,7 @@ function showWeather(response) {
   function showWeather(response) {
     let cityElement = document.querySelector("#city");
     let temperatureElement = document.querySelector("#temperature");
-    let weatherElement = document.querySelector("#weather");
+    let weatherElement = document.querySelector("#description");
     let weatherIconElement = document.querySelector("#weather-icon");
     let humidityElement = document.querySelector("#humidity");
     let windElement = document.querySelector("#wind");
@@ -70,9 +70,10 @@ function showWeather(response) {
     humidityElement.innerHTML = `${response.data.main.humidity} %`;
     windElement.innerHTML = `${Math.round(response.data.wind.speed)} mph`;
 
-    weatherIconElement.setAttribute =
-      ("src",
-      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+    weatherIconElement.setAttribute(
+      "src",
+      `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
   }
 
   // ------------------ more functions -----------------------------
@@ -156,11 +157,15 @@ function getCurrentLocation(event) {
 //   temperatureElement.innerHTML = 66;
 // }
 
-// function convertToCelsius(event) {
-//   event.preventDefault();
-//   let temperatureElement = document.querySelector("#temperature");
-//   temperatureElement.innerHTML = 19;
-// }
+function displayCelciusTemperature(event) {
+  event.preventDefault();
+  let celciusTemperature = (32°F − 32) * 5 / 9;
+
+  alert("Link clicked");
+}
+
+let celciusConversionLink = document.querySelector("#celcius-conversion-link");
+celciusConversionLink.addEventListener("click", displayCelciusTemperature);
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
