@@ -143,12 +143,6 @@ function getCurrentLocation(event) {
 }
 
 //----------------temperature conversions---------------
-// function convertToFahrenheit(event) {
-//   event.preventDefault();
-//   let temperatureElement = document.querySelector("#temperature");
-//   temperatureElement.innerHTML = 66;
-// }
-
 function displayCelsiusTemperature(event) {
   event.preventDefault();
   let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
