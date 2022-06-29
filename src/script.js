@@ -157,6 +157,12 @@ function displayCelsiusTemperature(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
 searchCity("San Francisco");
 
 //------------variables--------------
@@ -164,6 +170,14 @@ let fahrenheitTemperature = null;
 
 let celsiusConversionLink = document.querySelector("#celsius-conversion-link");
 celsiusConversionLink.addEventListener("click", displayCelsiusTemperature);
+
+let fahrenheitConversionLink = document.querySelector(
+  "#fahrenheit-conversion-link"
+);
+fahrenheitConversionLink.addEventListener(
+  "click",
+  displayFahrenheitTemperature
+);
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
