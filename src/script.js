@@ -146,13 +146,17 @@ function getCurrentLocation(event) {
 function displayCelsiusTemperature(event) {
   event.preventDefault();
   let celsiusTemperature = ((fahrenheitTemperature - 32) * 5) / 9;
-  // alert("Link clicked");
+  // remove active class from fahrenheit link
+  fahrenheitConversionLink.classList.remove("active");
+  celsiusConversionLink.classList.add("active");
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
 function displayFahrenheitTemperature(event) {
   event.preventDefault();
+  celsiusConversionLink.classList.remove("active");
+  fahrenheitConversionLink.classList.add("active");
   let temperatureElement = document.querySelector("#temperature");
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }

@@ -121,6 +121,15 @@ button:hover,
   padding: 2px;
 }
 
+.temp-units .active {
+  color: #7c7d7d;
+  cursor: default;
+}
+
+.temp-units .active:hover {
+  text-decoration: none;
+}
+
 #weather-details-box {
   font-size: 18px;
   line-height: 1.2;
