@@ -133,6 +133,10 @@ button:hover,
   text-decoration: none;
 }
 
+.temp-line-spacer {
+  color: #7c7d7d;
+}
+
 #weather-details-box {
   font-size: 18px;
   line-height: 1.2;
