@@ -114,7 +114,7 @@ button:hover,
 }
 
 .temp-units {
-  color: #35c7bc;
+  color: #7c7d7d;
   font-size: 18px;
   position: relative;
   top: -42px;
@@ -122,13 +122,14 @@ button:hover,
 }
 
 .temp-units .active {
-  color: #7c7d7d;
+  color: #35c7bc;
   cursor: default;
-}
-
-.temp-units .active:hover {
   text-decoration: none;
 }
+
+/* .temp-units .active:hover {
+  text-decoration: none;
+} */
 
 #weather-details-box {
   font-size: 18px;
@@ -137,5 +138,6 @@ button:hover,
 }
 
 .weather-details-numbers {
-  color: #35c7bc;
+  color: #494c4c;
+  font-weight: 500;
 }
