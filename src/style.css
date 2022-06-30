@@ -8,9 +8,9 @@ h1 {
   margin-bottom: 10px;
 }
 
-/* a {
+a {
   color: #35c7bc;
-} */
+}
 
 p {
   display: block;
@@ -122,7 +122,7 @@ button:hover,
   padding: 2px;
 }
 
-.temp-units .active {
+.active {
   color: #35c7bc;
   cursor: default;
   text-decoration: none;
