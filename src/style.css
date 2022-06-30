@@ -19,11 +19,11 @@ p {
   font-size: 14px;
 }
 
-/* a:hover {
+a:hover {
   color: #35c7bc;
   font-weight: 500;
   text-decoration: none;
-} */
+}
 
 ul {
   list-style-type: none;
@@ -129,10 +129,9 @@ button:hover,
   text-decoration: none;
 }
 
-/* .temp-units .active:hover {
+.temp-units .active:hover {
   text-decoration: none;
-  color: #35c7bc;
-} */
+}
 
 #weather-details-box {
   font-size: 18px;
