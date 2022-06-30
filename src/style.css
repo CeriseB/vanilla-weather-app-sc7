@@ -116,7 +116,7 @@ button:hover,
 }
 
 .temp-units {
-  color: #7c7d7d;
+  color: #35c7bc;
   font-size: 18px;
   position: relative;
   top: -42px;
@@ -124,7 +124,7 @@ button:hover,
 }
 
 .temp-units .active {
-  color: #35c7bc;
+  color: #7c7d7d;
   cursor: default;
   text-decoration: none;
 }
