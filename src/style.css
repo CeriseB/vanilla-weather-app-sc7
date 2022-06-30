@@ -127,9 +127,9 @@ button:hover,
   text-decoration: none;
 }
 
-/* .temp-units .active:hover {
+.temp-units .active:hover {
   text-decoration: none;
-} */
+}
 
 #weather-details-box {
   font-size: 18px;
@@ -138,6 +138,6 @@ button:hover,
 }
 
 .weather-details-numbers {
-  color: #494c4c;
+  color: #7c7d7d;
   font-weight: 500;
 }
